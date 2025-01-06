@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Finder</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Bootstrap icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="search-bar">
+            <i class="bi bi-search"></i>
+            <h4 id="search-heading">
+                <input type="text" id="username-input" placeholder="Search GitHub Username...">
+            </h4>
+            <div class="search-button">
+                <button id="sbtn" type="submit">Search</button>
+            </div>      
+        </div>
+
+        <div class="user-data-result">
+
+            <img class="pimg">
+            <div class="udetails">
+                <h4 id="fullName"></h4>
+                <h5></h5>
+                <h4 id="bio"></h4>
+            </div>
+            <div class="mpd">
+                <div class="repos">
+                    <h4 id="public-repos"></h4>
+                    <h3 style="color: rgb(98,186,97);"></h3>
+                </div>
+                <div class="followers">
+                    <h4></h4>
+                    <h3></h3>
+                </div>
+                <div class="following">
+                    <h4></h4>
+                    <h3></h3>
+                </div>
+            </div>
+            <i class="ti"></i>
+            <i class="loc"></i>
+            <i class="link"></i>
+
+        </div>
+
+                
+
+    </div>
+
+
+
+    <script src="script.js"></script>    
+</body>
+</html>

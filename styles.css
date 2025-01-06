@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(21,28,48);
+    min-height: 100vh;
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: rgb(31,41,72);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.bi-search {
+    font-size: 24px;
+    color: rgb(0,123,251);
+    margin-right: 10px;
+}
+
+#search-heading {
+    flex-grow: 1;
+    margin: 0;
+}
+
+#username-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Source Code Pro", monospace;
+}
+
+.search-button {
+    margin-left: 10px;
+}
+
+#sbtn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(1,121,251);
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    cursor: pointer;
+}
+
+.user-data-result {
+    background-color: rgb(31,41,72);
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.pimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    grid-row: span 2;
+}
+
+.udetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.udetails h4, .udetails h5 {
+    margin: 5px 0;
+}
+
+.mpd {
+    grid-column: 1 / -1;
+    background-color: rgb(21,28,46);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    text-align: center;
+}
+
+.repos, .followers, .following {
+    display: flex;
+    flex-direction: column;
+}
+
+.ti, .loc, .link {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .search-bar {
+        flex-wrap: wrap;
+    }
+
+    #search-heading {
+        width: 100%;
+        order: 2;
+    }
+
+    .search-button {
+        width: 100%;
+        order: 3;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #sbtn {
+        width: 100%;
+    }
+
+    .user-data-result {
+        grid-template-columns: 1fr;
+    }
+
+    .pimg {
+        justify-self: center;
+    }
+
+    .udetails {
+        text-align: center;
+    }
+
+    .mpd {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ti, .loc, .link {
+        grid-column: 1;
+        justify-content: center;
+    }
+}
+
+
+
