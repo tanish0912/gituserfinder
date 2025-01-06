@@ -4,19 +4,13 @@ var button = document.querySelector("#sbtn").addEventListener("click", getData);
 
 async function getData(){
     var username = document.querySelector("#username-input").value;
-   
 
-    var url = "https://api.github.com/users/"+username;
+
+    const url = `/api/github?username=${username}`;
     try{
+
+        const response = await fetch(url);
         
-        var response = await fetch(url,
-            {headers: {
-                'Authorization': `token ${process.env.GITHUB_API_KEY}`
-               
-            }}
-        );
-
-
         if(!response.ok){
             throw new Error(`Response status: ${response.status}`);
         }
